@@ -48,13 +48,9 @@ export default function UpdatePasswordForm({ className = '' }) {
         <section className={className}>
             <header>
                 <h2 className="text-lg font-medium text-gray-900">
-                    Update Password
-                </h2>
+                    Zmień hasło                </h2>
 
-                <p className="mt-1 text-sm text-gray-600">
-                    Ensure your account is using a long, random password to stay
-                    secure.
-                </p>
+
             </header>
 
             <form onSubmit={updatePassword} className="mt-6 space-y-6">
@@ -132,7 +128,7 @@ export default function UpdatePasswordForm({ className = '' }) {
                         leaveTo="opacity-0"
                     >
                         <p className="text-sm text-gray-600">
-                            Saved.
+                            Zapisano
                         </p>
                     </Transition>
                 </div>

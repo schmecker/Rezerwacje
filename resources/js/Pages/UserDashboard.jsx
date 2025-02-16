@@ -45,11 +45,11 @@ export default function UserDashboard({ }) {
                                         ))}
                                     </ul>
                                 ) : (
-                                    <p>You have no upcoming bookings.</p>
+                                    <p>Brak nadchodzących rezerwacji</p>
                                 )}
                                 <div className="mt-6">
                                     <Link href="/rooms" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                                        Book a Room
+                                        Zarezerwuj sale
                                     </Link>
                                 </div>
                             </div>

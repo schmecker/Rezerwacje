@@ -1,21 +1,23 @@
-import { useForm } from "@inertiajs/react"
+import { useForm } from "@inertiajs/react";
 
 export default function RoomDetails({ }) {
     const { data, setData, post, processing, errors } = useForm({
         date: "",
         time: "",
-    })
+    });
 
     const handleSubmit = (e) => {
-        e.preventDefault()
-        post(`/rooms/${room.id}/book`)
-    }
+        e.preventDefault();
+        post(`/rooms/${room.id}/book`);
+    };
+
     const room = {
         id: 1,
-        name: "Conference Room A",
+        name: "Sala konferencyjna A",
         capacity: 20,
-        amenities: ["Projector", "Whiteboard", "WiFi", "Air Conditioning"],
+        amenities: ["Projektor", "Tablica", "WiFi", "Klimatyzacja"],
     };
+
     return (
         <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
             <div className="relative py-3 sm:max-w-xl sm:mx-auto">
@@ -24,15 +26,15 @@ export default function RoomDetails({ }) {
                     <div className="max-w-md mx-auto">
                         <div>
                             <h1 className="text-2xl font-semibold">{room.name}</h1>
-                            <p className="text-gray-600">Capacity: {room.capacity}</p>
-                            <p className="text-gray-600">Amenities: {room.amenities.join(", ")}</p>
+                            <p className="text-gray-600">Pojemność: {room.capacity} osób</p>
+                            <p className="text-gray-600">Udogodnienia: {room.amenities.join(", ")}</p>
                         </div>
                         <div className="divide-y divide-gray-200">
                             <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                                 <form onSubmit={handleSubmit}>
                                     <div className="mb-4">
                                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="date">
-                                            Date
+                                            Data
                                         </label>
                                         <input
                                             type="date"
@@ -45,7 +47,7 @@ export default function RoomDetails({ }) {
                                     </div>
                                     <div className="mb-6">
                                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="time">
-                                            Time
+                                            Godzina
                                         </label>
                                         <input
                                             type="time"
@@ -62,7 +64,7 @@ export default function RoomDetails({ }) {
                                             disabled={processing}
                                             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                                         >
-                                            Book Room
+                                            Zarezerwuj
                                         </button>
                                     </div>
                                 </form>
@@ -72,6 +74,5 @@ export default function RoomDetails({ }) {
                 </div>
             </div>
         </div>
-    )
+    );
 }
-

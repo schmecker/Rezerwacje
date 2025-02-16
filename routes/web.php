@@ -56,4 +56,26 @@ Route::get('/AdminDashboard', function () {
 });
 
 
+Route::get('/UserAccount', function () {
+    return  Inertia::render('UserAccount');
+});
+
+
+Route::get('/EditReservation', function () {
+    return  Inertia::render('EditReservation');
+});
+
+
+
+
+Route::get('/AdminDashboard', function () {
+    return  Inertia::render('AdminDashboard');
+});
+
+
+Route::get('/AdminDashboard', function () {
+    return  Inertia::render('AdminDashboard');
+});
+
+
 require __DIR__ . '/auth.php';

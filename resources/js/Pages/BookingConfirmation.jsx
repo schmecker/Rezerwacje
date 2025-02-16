@@ -1,11 +1,10 @@
-import { Link } from "@inertiajs/react"
+import { Link } from "@inertiajs/react";
 
-export default function BookingConfirmation({ }) {
-
+export default function BookingConfirmation() {
     const booking = {
         id: 12345,
         room: {
-            name: "Conference Room A",
+            name: "Sala Konferencyjna A",
         },
         date: "2025-03-15",
         time: "14:00",
@@ -18,19 +17,18 @@ export default function BookingConfirmation({ }) {
                 <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
                     <div className="max-w-md mx-auto">
                         <div>
-                            <h1 className="text-2xl font-semibold text-center">Booking Confirmed!</h1>
+                            <h1 className="text-2xl font-semibold text-center">Rezerwacja potwierdzona!</h1>
                         </div>
                         <div className="divide-y divide-gray-200">
                             <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
-                                <p>Room: {booking.room.name}</p>
-                                <p>Date: {booking.date}</p>
-                                <p>Time: {booking.time}</p>
-                                <p>Booking ID: {booking.id}</p>
+                                <p>Sala: {booking.room.name}</p>
+                                <p>Data: {booking.date}</p>
+                                <p>Godzina: {booking.time}</p>
+                                <p>ID rezerwacji: {booking.id}</p>
                             </div>
                             <div className="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">
                                 <Link href="/dashboard" className="text-blue-600 hover:text-blue-700">
-                                    {" "}
-                                    View My Bookings &rarr;{" "}
+                                    Powrót &rarr;
                                 </Link>
                             </div>
                         </div>
@@ -38,6 +36,5 @@ export default function BookingConfirmation({ }) {
                 </div>
             </div>
         </div>
-    )
+    );
 }
-
